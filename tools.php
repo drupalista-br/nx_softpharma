@@ -47,6 +47,7 @@ class tools {
 		$row = explode(",'", $row);
 
 		foreach($row as $table_field_name => $table_field_value) {
+		  $table_field_value = utf8_encode($table_field_value);
 		  if (isset($table_fields[$table_field_name])) {
 			$nx_table_field_name = $table_fields[$table_field_name];
 			$field_id_value = $row[$field_id];
